@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Grupos"/>
+        <attribute name="authors" value="Merixx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-02 08:23:20 p. m."/>
+        <attribute name="created" value="TWVyaXh4O0RFU0tUT1AtNklJNlZKSTsyMDI1LTA0LTAyOzA4OjE0OjIzIHAuIG0uOzMxNzI="/>
+        <attribute name="edited" value="TWVyaXh4O0RFU0tUT1AtNklJNlZKSTsyMDI1LTA0LTAyOzA4OjIzOjIwIHAuIG0uOzI7MzI3OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Genero, Inicial, Grupo" type="String" array="False" size=""/>
+            <output expression="&quot;Ingresa el genero: (F=Femenino, M=Masculino)&quot;" newline="True"/>
+            <input variable="Genero"/>
+            <output expression="&quot;Ingresa la inicial&quot;" newline="True"/>
+            <input variable="Inicial"/>
+            <if expression="Genero == &quot;M&quot; || Genero == &quot;F&quot; || Genero == &quot;m&quot; || Genero == &quot;f&quot;">
+                <then>
+                    <if expression="Genero == &quot;F&quot; &amp;&amp; Inicial &lt;= &quot;M&quot;">
+                        <then>
+                            <assign variable="Grupo" expression="&quot;A&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="Genero == &quot;M&quot; &amp;&amp; Inicial &gt;= &quot;N&quot;">
+                                <then>
+                                    <assign variable="Grupo" expression="&quot;A&quot;"/>
+                                </then>
+                                <else>
+                                    <assign variable="Grupo" expression="&quot;B&quot;"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <output expression="&quot;Tu grupo es: &quot; &amp; Grupo" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Entrada no valida&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
