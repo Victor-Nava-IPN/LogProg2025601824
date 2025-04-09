@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Factoriales"/>
+        <attribute name="authors" value="Merixx"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-08 07:14:16 p. m."/>
+        <attribute name="created" value="TWVyaXh4O0RFU0tUT1AtNklJNlZKSTsyMDI1LTA0LTA4OzA2OjU1OjIzIHAuIG0uOzMxODE="/>
+        <attribute name="edited" value="TWVyaXh4O0RFU0tUT1AtNklJNlZKSTsyMDI1LTA0LTA4OzA3OjE0OjE2IHAuIG0uOzM7MzI4OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, r" type="Integer" array="False" size=""/>
+            <assign variable="r" expression="1"/>
+            <output expression="&quot;Ingresa un entero&quot;" newline="True"/>
+            <input variable="x"/>
+            <if expression="x&gt;=0">
+                <then>
+                    <while expression="x&gt;0">
+                        <assign variable="r" expression="r*x"/>
+                        <assign variable="x" expression="x-1"/>
+                    </while>
+                    <output expression="&quot;El factorial es:&quot; &amp; r" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;El factorial es indefinido&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
